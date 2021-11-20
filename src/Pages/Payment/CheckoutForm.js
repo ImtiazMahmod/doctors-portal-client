@@ -15,7 +15,7 @@ const CheckoutForm = ({ payment }) => {
   const [clientSecret, setClientSecret] = useState("");
   console.log(price);
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://serene-citadel-59200.herokuapp.com/create-payment-intent", {
       method: "post",
       headers: {
         "content-type": "application/json",
@@ -85,7 +85,7 @@ const CheckoutForm = ({ payment }) => {
       };
 
       ///update to database
-      fetch(`http://localhost:5000/appointment/${_id}`, {
+      fetch(`https://serene-citadel-59200.herokuapp.com/appointment/${_id}`, {
         method: "put",
         headers: {
           "content-type": "application/json",

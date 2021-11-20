@@ -13,7 +13,9 @@ const Payment = () => {
   const [payment, setPayment] = useState({});
   //load user payment details
   useEffect(() => {
-    fetch(`http://localhost:5000/appointments/${appointmentId}`)
+    fetch(
+      `https://serene-citadel-59200.herokuapp.com/appointments/${appointmentId}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setPayment(data);

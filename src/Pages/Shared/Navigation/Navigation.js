@@ -43,6 +43,9 @@ const Navigation = () => {
               Doctors Portal
             </Link>
           </Typography>
+          <Link className={root} to="/doctors">
+            <Button color="inherit">Doctors</Button>
+          </Link>
           <Link className={root} to="/appointment">
             <Button color="inherit">Appointment</Button>
           </Link>
