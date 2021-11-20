@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import isWeekend from "date-fns/isWeekend";
+import React from "react";
 import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
@@ -15,7 +14,6 @@ const Calendar = () => {
         displayStaticWrapperAs="desktop"
         openTo="day"
         value={date}
-        // shouldDisableDate={isWeekend}
         onChange={(newDate) => {
           setDate(newDate);
         }}

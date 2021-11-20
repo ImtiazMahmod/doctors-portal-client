@@ -12,6 +12,7 @@ const Booking = ({ book }) => {
       <Paper variant="outlined" sx={{ p: 5 }}>
         <Typography variant="h5">{book.title}</Typography>
         <Typography variant="body1">{book.time}</Typography>
+        <Typography>Booking Fee: ${book.price}</Typography>
         <Typography variant="caption">{book.space} SPACE AVAILABLE</Typography>
         <br />
         <Button onClick={handleOpen} variant="contained">

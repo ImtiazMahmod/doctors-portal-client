@@ -32,11 +32,12 @@ function BookingModal({ book, handleClose, open }) {
     phone: "",
   };
   const [bookData, setBookDate] = useState(initialInfo);
-
+  // console.log(book);
   const handleSubmit = (e) => {
     const appointment = {
       ...bookData,
       time: book.time,
+      price: book.price,
       date: date.toLocaleDateString(),
       serviceName: book.title,
     };

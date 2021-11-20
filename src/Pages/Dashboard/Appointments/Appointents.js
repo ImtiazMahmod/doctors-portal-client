@@ -7,9 +7,11 @@ import {
   TableRow,
   Typography,
   Paper,
+  Button,
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import useAppointment from "../../../Hooks/useAppointment";
 import useAuth from "./../../../Hooks/useAuth";
 
@@ -62,7 +64,15 @@ const Appointments = () => {
                 </TableCell>
                 <TableCell align="right">{row.time}</TableCell>
                 <TableCell align="right">{row.serviceName}</TableCell>
-                <TableCell align="right">cancel</TableCell>
+                <TableCell align="right">
+                  {row?.payment ? (
+                    "paid"
+                  ) : (
+                    <Link to={`/dashboard/payment/${row._id}`}>
+                      <Button variant="contained">Pay</Button>
+                    </Link>
+                  )}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
